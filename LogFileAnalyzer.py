@@ -24,3 +24,5 @@ try:
 except FileNotFoundError:
     print("This files doesn't exist")
 
+
+input_file.close()
