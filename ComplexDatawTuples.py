@@ -20,7 +20,6 @@ def average(student_scores):
 
     sorted_list = sorted(average_list, key=lambda x: x[2], reverse=True)
 
-    print("Sorted List:", sorted_list)
     print("Top Student:", sorted_list[0])
 
 student_scores = (
