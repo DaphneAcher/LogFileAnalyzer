@@ -39,6 +39,9 @@ def search(directory, search_string, replace_string):
                 print(f"{search_string} found {occurrences} times in {file}")
                 changes = content.replace(search_string,replace_string)
 
+                with open(file, "w") as f:
+                    f.write(changes)
+
                 print(f"Replaced {occurrences} occurrences in {file}.\n")
 
         except FileNotFoundError:
