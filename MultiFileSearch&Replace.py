@@ -29,12 +29,12 @@ def get_user_inputs():
 def search(directory, search_string, replace_string):
     search_files = [i for i in os.listdir(directory) if i.endswith(".txt")]
     for file in search_files:
-        file_path = os.path.join(directory, file)  #Full path to the file
+        file_path = os.path.join(directory, file)
         try:
             with open(file_path, "r") as f:
                 content = f.read()
             
-            occurrences = content.count(search_string)  #Count times of occurences
+            occurrences = content.count(search_string)
             
             if occurrences > 0:
                 print(f"{search_string} found {occurrences} times in {file}")
