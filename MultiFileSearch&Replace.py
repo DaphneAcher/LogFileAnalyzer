@@ -29,9 +29,8 @@ def get_user_inputs():
 def search(directory, search_string, replace_string):
     search_files = [i for i in os.listdir(directory) if i.endswith(".txt")]
     for file in search_files:
-        file_path = os.path.join(directory, file)
         try:
-            with open(file_path, "r") as f:
+            with open(file, "r") as f:
                 content = f.read()
             
             occurrences = content.count(search_string)
